@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouthGuard — Autonomous AI Agents for Onchain Legal & Policy Delegation</title>
+<meta name="description" content="YouthGuard lets DAOs and wallets delegate legal, policy and compliance rules to autonomous AI agents that enforce them onchain, in real time.">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Segoe UI',sans-serif; background:#07090f; color:#e8ecf4; line-height:1.6; }
+  a { text-decoration:none; color:inherit; }
+  .container { max-width:1100px; margin:0 auto; padding:0 24px; }
+
+  /* NAV */
+  nav { display:flex; justify-content:space-between; align-items:center; padding:20px 0; }
+  .logo { font-size:1.4rem; font-weight:800; }
+  .logo span { color:#5eead4; }
+  nav ul { display:flex; gap:28px; list-style:none; font-size:.95rem; }
+  nav a:hover { color:#5eead4; }
+  .btn { display:inline-block; padding:12px 28px; border-radius:12px; font-weight:700; transition:.2s; }
+  .btn-primary { background:linear-gradient(90deg,#14b8a6,#0ea5e9); color:#04121a; }
+  .btn-primary:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(20,184,166,.35); }
+  .btn-ghost { border:1px solid #26324a; color:#e8ecf4; }
+  .btn-ghost:hover { border-color:#5eead4; color:#5eead4; }
+
+  /* HERO */
+  header { position:relative; overflow:hidden; padding:60px 0 100px; }
+  .glow { position:absolute; width:600px; height:600px; border-radius:50%;
+    background:radial-gradient(circle,rgba(20,184,166,.18),transparent 70%);
+    top:-200px; right:-150px; pointer-events:none; }
+  .glow2 { position:absolute; width:500px; height:500px; border-radius:50%;
+    background:radial-gradient(circle,rgba(14,165,233,.14),transparent 70%);
+    bottom:-250px; left:-150px; pointer-events:none; }
+  .badge { display:inline-block; padding:6px 16px; border:1px solid #1f3b47; border-radius:99px;
+    color:#5eead4; font-size:.8rem; margin-bottom:24px; background:rgba(20,184,166,.06); }
+  h1 { font-size:clamp(2.2rem,5vw,3.6rem); font-weight:800; line-height:1.15; max-width:800px; }
+  h1 span { background:linear-gradient(90deg,#5eead4,#38bdf8); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .sub { color:#93a3b8; max-width:640px; margin:24px 0 36px; font-size:1.1rem; }
+  .hero-btns { display:flex; gap:16px; flex-wrap:wrap; }
+  .stats { display:flex; gap:48px; margin-top:70px; flex-wrap:wrap; }
+  .stat b { font-size:1.8rem; color:#5eead4; display:block; }
+  .stat small { color:#6b7a92; }
+
+  /* SECTIONS */
+  section { padding:90px 0; }
+  .section-tag { color:#5eead4; font-size:.85rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; }
+  h2 { font-size:clamp(1.6rem,3.5vw,2.4rem); margin:12px 0 48px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; }
+  .card { background:#0d1220; border:1px solid #1b2438; border-radius:16px; padding:32px; transition:.2s; }
+  .card:hover { border-color:#2dd4bf; transform:translateY(-4px); }
+  .card .icon { font-size:2rem; margin-bottom:16px; }
+  .card h3 { margin-bottom:12px; font-size:1.15rem; }
+  .card p { color:#93a3b8; font-size:.95rem; }
+
+  /* HOW */
+  .steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:24px; counter-reset:step; }
+  .step { position:relative; padding:32px; background:#0d1220; border-radius:16px; border:1px solid #1b2438; }
+  .step::before { counter-increment:step; content:"0" counter(step); font-size:2.4rem; font-weight:800;
+    color:transparent; -webkit-text-stroke:1px #2dd4bf; display:block; margin-bottom:12px; }
+
+  /* CTA */
+  .cta { text-align:center; background:linear-gradient(135deg,#0d1220,#0a1a24);
+    border:1px solid #1b2438; border-radius:24px; padding:70px 24px; }
+  .cta h2 { margin-bottom:16px; }
+  .cta p { color:#93a3b8; margin-bottom:32px; }
+
+  footer { border-top:1px solid #1b2438; padding:32px 0; color:#6b7a92; font-size:.9rem;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+  footer a:hover { color:#5eead4; }
+  @media(max-width:640px){ nav ul{display:none;} .stats{gap:28px;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="glow"></div><div class="glow2"></div>
+  <div class="container">
+    <nav>
+      <div class="logo">Youth<span>Guard</span></div>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#cta">Contact</a></li>
+      </ul>
+      <a href="#cta" class="btn btn-primary">Get Early Access</a>
+    </nav>
+
+    <div style="margin-top:80px;">
+      <span class="badge">⚡ Powered by Autonomous Agents</span>
+      <h1>Delegate Legal &amp; Policy Rules to <span>Autonomous Onchain Agents</span></h1>
+      <p class="sub">YouthGuard lets DAOs, wallets and dApps define legal, compliance and spending policies once — then AI agents enforce them onchain in real time, 24/7, without human bottlenecks.</p>
+      <div class="hero-btns">
+        <a href="#cta" class="btn btn-primary">Try the Demo</a>
+        <a href="#features" class="btn btn-ghost">Read the Docs</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><b>24/7</b><small>Policy Enforcement</small></div>
+        <div class="stat"><b>100%</b><small>Onchain, Verifiable Rules</small></div>
+        <div class="stat"><b>&lt;1s</b><small>Agent Response Time</small></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="container">
+    <div class="section-tag">Features</div>
+    <h2>Why teams choose YouthGuard</h2>
+    <div class="grid">
+      <div class="card"><div class="icon">🛡️</div><h3>Autonomous Policy Agents</h3><p>AI agents that read, interpret and enforce your legal &amp; compliance rules onchain — no manual review queues.</p></div>
+      <div class="card"><div class="icon">📜</div><h3>Rules as Code</h3><p>Define spending limits, jurisdiction rules and KYC policies once. Agents apply them to every transaction automatically.</p></div>
+      <div class="card"><div class="icon">🔗</div><h3>Fully Onchain &amp; Verifiable</h3><p>Every decision is logged onchain, making compliance audits instant and trustless.</p></div>
+      <div class="card"><div class="icon">🧩</div><h3>Works With Any Wallet</h3><p>Drop-in SDK for Solana, EVM chains and multi-sig wallets. Integrate in minutes.</p></div>
+      <div class="card"><div class="icon">⚡</div><h3>Real-Time Risk Blocking</h3><p>Suspicious transfers, sanctioned addresses and policy breaches are blocked before they execute.</p></div>
+      <div class="card"><div class="icon">🌍</div><h3>Built for Global Teams</h3><p>Multi-jurisdiction support for DAOs and startups operating across borders.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="background:#0a0e18;">
+  <div class="container">
+    <div class="section-tag">How it works</div>
+    <h2>Three steps to autonomous compliance</h2>
+    <div class="steps">
+      <div class="step"><h3>Define Your Policies</h3><p style="color:#93a3b8;font-size:.95rem;">Write your legal and spending rules in plain language or as code.</p></div>
+      <div class="step"><h3>Deploy the Agent</h3><p style="color:#93a3b8;font-size:.95rem;">YouthGuard converts your policies into an autonomous agent anchored onchain.</p></div>
+      <div class="step"><h3>Stay Protected 24/7</h3><p style="color:#93a3b8;font-size:.95rem;">Agents monitor and enforce every transaction in real time, with full audit trails.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="container">
+    <div class="cta">
+      <h2>Ready to automate your onchain compliance?</h2>
+      <p>Join the early access list and be first to integrate autonomous policy agents into your product.</p>
+      <a href="mailto:contact@youthguard.io" class="btn btn-primary">Get Early Access</a>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <footer>
+    <div>© 2026 YouthGuard. All rights reserved.</div>
+    <div>
+      <a href="#">Twitter / X</a> &nbsp;·&nbsp;
+      <a href="#">GitHub</a> &nbsp;·&nbsp;
+      <a href="#">Docs</a>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
